@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    text-align: center;
+     background: #0097a7;
+     margin-bottom: 15px;
+     padding: .5rem 1rem;
+     font-size: 1.25rem;
+     text-transform: uppercase;
+     color: #fff;
+}
+.container{
+    display: flex;
+    max-width: 677px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.price-block{
+    display: flex;
+    justify-content: space-between;
+}
+.product {
+    flex-basis: 32%;
+    position: relative;
+    display: inline-block;
+    border:3px solid #fff;
+    z-index: 10;
+}
+
+.wrap-product {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 164px;
+    background-color: #fff;
+    margin: 5px;
+    margin-bottom: 0px;
+    padding: 10px;
+    z-index: 2;
+}
+
+.hover-product {
+    background-color: #fff;
+    width: 196.15px;
+    margin-left: -3px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translate3d(0, -100%, 0);
+    z-index: 1;
+    border: 3px solid;
+    border-top: none;
+    border-color: #ef846d;
+    padding: 10px;
+}
+
+
+.product:hover {
+    z-index: 11;
+    border-color:  #ef846d;
+    border-bottom: none;
+}
+
+.product:hover .hover-product {
+    opacity: 1;
+    visibility: visible;;
+    transform: none;
+    
+}
+
+.product:hover button{
+    background-color:#eb5c3e;
+}
+
+.add-to-cart{
+    border:none;
+    cursor: pointer;
+    padding:4px 4px 10px 6px ;
+    background-color:#3a3a3a;
+    color:#fff;
+
+}
+
+.product_title{
+        height: 60px;
+        margin: 15px 0 15px 0;
+}
+
+.price{
+    font-weight: bold;
+}
+
+.title {
+    /* Прячем часть линий, выходящие за пределы блока */
+    overflow: hidden;
+    /* Выравниваем заголовок по центру, можно указать left, right для выравнивания влево или вправо */
+    text-align: center;
+    /* Размер заголовка */
+    font-size: 25px;
+}
+
+.title:before,
+.title:after {
+    /* Свойство content необходимо указывать хотя бы пустое, иначе псевдоэлементы не отобразятся */
+    content: "";
+    /* Свойства линий, выравнивание по центру по вертикали */
+    display: inline-block;
+    vertical-align: middle;
+    /* Ширина - 100% и указываем толщину линии */
+    width: 100%;
+    height: 1px;
+    /* Цвет линии */
+    background-color: #e4e4e4;
+    /* Возможность для пседоэлементов изменить позицию линии */
+    position: relative;
+}
+
+.title:before {
+    /* Ставим левую линию слева от текста, смещая ее на 100% влево */
+    margin-left: -100%;
+    /* Отступ линии от заголовка */
+    left: -14px;
+}
+
+.title:after {
+    /* Ставим правую линию справа от текста, смещая ее на 100% вправо */
+    margin-right: -100%;
+    /* Отступ линии от заголовка */
+    right: -14px;
+}
+
+
+.rating-result {
+    width: 265px;
+    margin: 0 auto;
+}
+
+.rating-result span {
+    padding: 0;
+    font-size: 32px;
+    margin: 0 3px;
+    line-height: 1;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+
+.active:before {
+    content: '★';
+}
+
+.product:hover span.active{
+        color: #eb5d3f;
+        text-shadow: 1px 1px #c60;
+}
+
