@@ -18,6 +18,12 @@ h1{
     margin: 0 auto;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width:623px) {
+    .container {
+        justify-content: center
+    }
+}
 .price-block{
     display: flex;
     justify-content: space-between;
